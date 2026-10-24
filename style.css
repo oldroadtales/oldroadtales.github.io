@@ -1,0 +1,77 @@
+/* Old Road Tales website. Brand pieces use black, grey and fog, plus the amber lantern #F5A524 (brand/BRAND.md).
+   Fonts are served from this site (no third parties): IM Fell English for titles, EB Garamond for text. */
+@font-face {
+  font-family: "IM Fell English";
+  src: url("fonts/IMFeENrm28P.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/EBGaramond-latin.woff") format("woff");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+:root {
+  --black: #000;
+  --metal: #2c2d31;
+  --grey: #8e8e8e;
+  --fog: #e4e2de;
+  --amber: #f5a524;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--black); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--fog);
+  background:
+    radial-gradient(120% 30% at 50% 62%, rgba(228, 226, 222, 0.07), transparent 70%),
+    radial-gradient(70% 18% at 22% 70%, rgba(228, 226, 222, 0.05), transparent 70%),
+    radial-gradient(70% 18% at 80% 58%, rgba(228, 226, 222, 0.04), transparent 70%),
+    var(--black);
+  background-attachment: fixed;
+  font: 400 1.15rem/1.6 "EB Garamond", Garamond, Georgia, serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main, footer { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
+
+h1, h2 { font-family: "IM Fell English", "EB Garamond", Georgia, serif; font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(2.6rem, 9vw, 4rem); margin: 0.2em 0 0.3em; letter-spacing: 0.01em; }
+h2 { font-size: 1.6rem; margin: 2.2em 0 0.5em; }
+p, li { color: var(--fog); }
+.quiet { color: var(--grey); }
+
+a { color: var(--fog); text-decoration-color: var(--amber); text-underline-offset: 0.18em; overflow-wrap: anywhere; }
+a:hover, a:focus-visible { color: var(--amber); }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+/* home */
+.hero { text-align: center; padding-top: 3rem; }
+.hero img { width: min(15rem, 60vw); height: auto; display: block; margin: 0 auto -1rem; }
+.lede { font-size: 1.3rem; }
+.watch { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1.8rem 0 0.6rem; padding: 0; list-style: none; }
+.watch a {
+  display: inline-block; padding: 0.55em 1.2em; border: 1px solid var(--grey); border-radius: 999px;
+  text-decoration: none;
+}
+.watch a:hover, .watch a:focus-visible { border-color: var(--amber); }
+.tool { border-top: 1px solid var(--metal); margin-top: 3rem; }
+
+/* legal pages */
+.top { display: flex; align-items: center; gap: 0.6rem; padding-top: 1.5rem; text-decoration: none; }
+.top img { width: 3rem; height: 3rem; }
+.top span { font-family: "IM Fell English", Georgia, serif; font-size: 1.3rem; }
+.updated { color: var(--grey); margin-top: -0.6rem; }
+ul { padding-left: 1.2rem; }
+li { margin: 0.35em 0; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 0.9em; color: var(--grey); }
+
+footer { margin-top: 3.5rem; padding-bottom: 2.5rem; font-size: 1rem; }
+footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; border-top: 1px solid var(--metal); padding-top: 1rem; }
+footer a, footer p { color: var(--grey); }

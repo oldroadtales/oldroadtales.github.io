@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Old Road Tales: the caged railway lamp</title>
+  <!-- The brand lantern. Amber #F5A524 is the only warm colour; the metal is plain dark grey.
+       The lantern spans about 69% of the height around the centre; its furthest point is 392 px from the centre, so a circle crop (512 px) never clips it. -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="52%" r="50%">
+      <stop offset="0" stop-color="#F5A524" stop-opacity="0.55"/>
+      <stop offset="0.42" stop-color="#F5A524" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#F5A524" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glass" cx="50%" cy="58%" r="60%">
+      <stop offset="0" stop-color="#fff4dc"/>
+      <stop offset="0.35" stop-color="#F5A524"/>
+      <stop offset="1" stop-color="#F5A524" stop-opacity="0.75"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="56"/></filter>
+    <filter id="flameblur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <circle cx="512" cy="530" r="500" fill="url(#glow)" filter="url(#soft)"/>
+  <g id="lantern" transform="translate(512 512) scale(3.0) translate(-200 -188)">
+    <!-- bail handle -->
+    <path d="M156 118 C156 70 244 70 244 118" fill="none" stroke="#2c2d31" stroke-width="8" stroke-linecap="round"/>
+    <!-- domed cap -->
+    <ellipse cx="200" cy="130" rx="56" ry="20" fill="#2c2d31" stroke="#4a4b52" stroke-width="2"/>
+    <rect x="150" y="128" width="100" height="16" fill="#2c2d31"/>
+    <!-- glass and flame -->
+    <rect x="154" y="144" width="92" height="124" rx="40" fill="url(#glass)"/>
+    <ellipse cx="200" cy="212" rx="16" ry="26" fill="#F5A524" filter="url(#flameblur)" opacity="0.9"/>
+    <path d="M200 190 C209 206 209 222 200 226 C191 222 191 206 200 190 Z" fill="#fff7e6"/>
+    <!-- wire cage: four bars and two hoops -->
+    <line x1="166" y1="144" x2="166" y2="268" stroke="#2c2d31" stroke-width="5"/>
+    <line x1="184" y1="144" x2="184" y2="268" stroke="#2c2d31" stroke-width="5"/>
+    <line x1="216" y1="144" x2="216" y2="268" stroke="#2c2d31" stroke-width="5"/>
+    <line x1="234" y1="144" x2="234" y2="268" stroke="#2c2d31" stroke-width="5"/>
+    <ellipse cx="200" cy="178" rx="49" ry="6" fill="none" stroke="#2c2d31" stroke-width="5"/>
+    <ellipse cx="200" cy="236" rx="49" ry="6" fill="none" stroke="#2c2d31" stroke-width="5"/>
+    <!-- stepped base -->
+    <rect x="144" y="266" width="112" height="28" rx="7" fill="#2c2d31" stroke="#4a4b52" stroke-width="2"/>
+    <rect x="160" y="294" width="80" height="12" rx="4" fill="#2c2d31"/>
+  </g>
+</svg>
